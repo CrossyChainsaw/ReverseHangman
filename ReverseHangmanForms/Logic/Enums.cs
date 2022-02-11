@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace ReverseHangmanForms.Logic
 {
+    public enum Roles
+    {
+        Wordmaster,
+        Guesser
+    }
     enum Adjectives
     {
         Abandoned,
@@ -167,10 +172,5 @@ namespace ReverseHangmanForms.Logic
         Zombies,
         Zoo,
         Zygapophysis
-    }
-    public enum Roles
-    {
-        Wordmaster,
-        Guesser
     }
 }

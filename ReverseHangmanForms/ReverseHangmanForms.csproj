@@ -48,7 +48,10 @@
   <ItemGroup>
     <Compile Include="Logic\Alphabet.cs" />
     <Compile Include="Logic\Enums.cs" />
-    <Compile Include="Logic\Game.cs" />
+    <Compile Include="Logic\Fart.cs" />
+    <Compile Include="Logic\Guess.cs" />
+    <Compile Include="Logic\GuessCollection.cs" />
+    <Compile Include="Logic\WordClass.cs" />
     <Compile Include="Presentation\FRM_CreateTeams.cs">
       <SubType>Form</SubType>
     </Compile>

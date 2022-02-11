@@ -8,12 +8,6 @@ namespace ReverseHangmanForms.Logic
 {
     public class Team
     {
-        // Constructors
-        public Team(string name)
-        {
-            Name = name;
-        }
-
         // Fields
         static Random _rnd = new Random();
 
@@ -24,12 +18,11 @@ namespace ReverseHangmanForms.Logic
         public Roles Role { get; set; }
 
         // Methods
-        public void LoseLife()
+        public Team(string name)
         {
-            Lives--;
+            Name = name;
         }
 
-        // Methods - Static
         public static string CreateRandomTeamName()
         {
             string randomTeamName = "";
@@ -58,5 +51,16 @@ namespace ReverseHangmanForms.Logic
             string randomNoun = "" + (Nouns)values.GetValue(rnd.Next(values.Length));
             return randomNoun;
         }
+
+        public void LoseLife()
+        {
+            Lives--;
+        }
+
+        public void CalculateLives(List<string> differentLetters)
+        {
+            Lives = Convert.ToInt32(Math.Floor(differentLetters.Count / 2.0) + 1);
+        }
+
     }
 }

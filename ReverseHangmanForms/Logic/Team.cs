@@ -3,24 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms; // remove this later
 
 namespace ReverseHangmanForms.Logic
 {
-    public class Team
+    internal class Team
     {
         // Fields
         static Random _rnd = new Random();
+        GuessCollection _guessCollection;
+        int _maxLives;
+        bool _continueAfterSweep = false;
+        int _pointsYouWillGain = 0;
+        bool _endRound = false;
 
         // Properties
+        public GuessCollection GuessCollection { get { return _guessCollection; } }
+        public bool EndRound { get { return _endRound; } }
         public string Name { get; private set; }
         public int Score { get; private set; }
         public int Lives { get; private set; }
         public Roles Role { get; set; }
 
         // Methods
-        public Team(string name)
+        public Team(string name, GuessCollection guessCollection)
         {
             Name = name;
+            Score = 0;
+            _guessCollection = guessCollection;
         }
 
         public static string CreateRandomTeamName()
@@ -60,7 +70,101 @@ namespace ReverseHangmanForms.Logic
         public void CalculateLives(List<string> differentLetters)
         {
             Lives = Convert.ToInt32(Math.Floor(differentLetters.Count / 2.0) + 1);
+            _maxLives = Lives;
         }
 
+        public void EndOfGuess()
+        {
+            if (_continueAfterSweep == false)
+            {
+                if (Lives == 0 && _guessCollection.UnderGoal())
+                {
+                    MessageBox.Show("Tiebreaker, choose a microgame");
+                    //
+                    //
+                    //
+                    // Tiebreaker
+                    //
+                    //
+                    //
+                }
+                else if (Lives == 0)
+                {
+                    MessageBox.Show("Loser");
+                    _pointsYouWillGain = 0;
+                    _endRound = true;
+                }
+                else if (Lives == _maxLives && _guessCollection.UnderGoal())
+                {
+                    DialogResult dialogResult = MessageBox.Show("Continue for double or nothing?", "Hardest decision ever", MessageBoxButtons.YesNo);
+
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        MessageBox.Show("Lets continue then");
+                        _continueAfterSweep = true;
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        MessageBox.Show("Bitch");
+                        MessageBox.Show("Noble Sweep +2 points?");
+                        _endRound = true;
+                    }
+                    _pointsYouWillGain = 2;
+                }
+                else if (_guessCollection.UnderGoal())
+                {
+                    DialogResult dialogResult = MessageBox.Show("Continue?", "Some Title", MessageBoxButtons.YesNo);
+
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        MessageBox.Show("Lets continue then double 'r nothing");
+                        _continueAfterSweep = true;
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        MessageBox.Show("Bitch");
+                        MessageBox.Show("Its just a sweep +1");
+                        _endRound = true;
+                    }
+                    _pointsYouWillGain = 1;
+                }
+            }
+            if (_continueAfterSweep == true)
+            {
+                if (Lives == 0)
+                {
+                    MessageBox.Show("Failed clean sweep noob"); // randomize some funny fail messages
+                    // failed clean sweep +0
+                    _pointsYouWillGain *= 0;
+                    _endRound = true;
+                }
+                else if (Lives == _maxLives && _guessCollection.GuessedOutAllLetters())
+                {
+                    MessageBox.Show("Royal Sweep +6");
+                    _pointsYouWillGain = 6;
+                    _endRound = true;
+                }
+                else if (Lives > 0 && _guessCollection.GuessedOutAllLetters())
+                {
+                    MessageBox.Show("Clean Sweep +2");
+                    _pointsYouWillGain *= 2;
+                    _endRound = true;
+                }
+            }
+            if (_endRound == true)
+            {
+                AddScore(_pointsYouWillGain);
+            }
+        }
+
+        public void ResetGuessCollection()
+        {
+            _guessCollection = new GuessCollection();
+        }
+
+        void AddScore(int gainedPointsThisRound)
+        {
+            Score += gainedPointsThisRound;
+        }
     }
 }

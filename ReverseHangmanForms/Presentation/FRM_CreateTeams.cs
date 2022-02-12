@@ -15,7 +15,8 @@ namespace ReverseHangmanForms
     {
 
         // Fields
-        TeamCollection teamCollection = new TeamCollection();
+        TeamCollection _teamCollection = new TeamCollection();
+        Random _rnd = new Random();
         public Form FRM_Menu;
 
         // Methods
@@ -24,20 +25,36 @@ namespace ReverseHangmanForms
             InitializeComponent();
             this.FRM_Menu = FRM_Menu;
         }
-        public bool AreTeamnamesFilledIn()
+        bool AreTeamnamesFilledIn()
         {
             return TB_TeamOne.Text.Length > 0 && TB_TeamTwo.Text.Length > 0;
         }
-        public void CreateTeams()
+        void CreateTeams()
         {
-            Team team1 = new Team(TB_TeamOne.Text);
-            Team team2 = new Team(TB_TeamTwo.Text);
-            teamCollection.AddTeam(team1);
-            teamCollection.AddTeam(team2);
+            Team team1 = new Team(TB_TeamOne.Text, new GuessCollection());
+            Team team2 = new Team(TB_TeamTwo.Text, new GuessCollection());
+            _teamCollection.AddTeam(team1);
+            _teamCollection.AddTeam(team2);
         }
-        public void OpenGameForm()
+        void GiveTeamsRandomRoles()
         {
-            FRM_Game frm_Game = new FRM_Game(teamCollection);
+            int randomNumber = _rnd.Next(0, 2);
+            if (randomNumber == 0)
+            {
+                _teamCollection.GetTeamList()[0].Role = Roles.Wordmaster;
+                _teamCollection.GetTeamList()[1].Role = Roles.Guesser;
+            }
+            else
+            {
+                _teamCollection.GetTeamList()[0].Role = Roles.Guesser;
+                _teamCollection.GetTeamList()[1].Role = Roles.Wordmaster;
+            }
+            //_teamCollection.GetTeamList()[0].Role = Roles.Guesser;
+            //_teamCollection.GetTeamList()[1].Role = Roles.Wordmaster;
+        }
+        void OpenGameForm()
+        {
+            FRM_Game frm_Game = new FRM_Game(_teamCollection);
             frm_Game.Show();
             this.Hide();
         }
@@ -50,9 +67,10 @@ namespace ReverseHangmanForms
         }
         private void BTN_Start_Click(object sender, EventArgs e)
         {
-            if (TB_TeamOne.Text.Length > 0 && TB_TeamTwo.Text.Length > 0)
+            if (AreTeamnamesFilledIn())
             {
                 CreateTeams();
+                GiveTeamsRandomRoles();
                 OpenGameForm();
             }
             else

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReverseHangmanForms.Logic
 {
-    public class TeamCollection
+    internal class TeamCollection
     {
         // Fields
         List<Team> _teamList = new List<Team>();

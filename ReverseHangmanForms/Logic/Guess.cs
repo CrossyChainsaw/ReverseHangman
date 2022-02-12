@@ -10,22 +10,20 @@ namespace ReverseHangmanForms.Logic
     internal class Guess
     {
         // Fields
-        TeamCollection _teamCollection;
-        GuessCollection _guessCollection;
+        Team _guesser;
         WordClass _wordClass;
 
         // Properties
         public string Letter { get; private set; }
 
         // Methods
-        public Guess(string letter, GuessCollection guessCollection, TeamCollection teamCollection, WordClass wordClass)
+        public Guess(string letter, Team guesser, WordClass wordClass)
         {
-            _teamCollection = teamCollection;
-            _guessCollection = guessCollection;
+            _guesser = guesser;
             _wordClass = wordClass;
 
             Letter = letter;
-            guessCollection.AddGuess(this);
+            _guesser.GuessCollection.SaveGuess(this);
             GuessIsInWord(_wordClass.CheckIfWordContainsLetter(Letter));
         }
 
@@ -54,13 +52,8 @@ namespace ReverseHangmanForms.Logic
 
         void WrongGuess()
         {
-            _teamCollection.GetTeamList()[0].LoseLife();
+            _guesser.LoseLife();
             PlayRandomFart();
-        }
-
-        bool UnderGoal()
-        {
-            return (26 - _guessCollection.guessedLetters.Count < _guessCollection.Goal);
         }
     }
 }

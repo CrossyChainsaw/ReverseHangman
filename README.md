@@ -1,5 +1,6 @@
 # Reverse Hangman
 Reverse hangman is as it says, hangman but reversed. You try to guess out letters that the word **DOES NOT** contain.
+Disclaimer: This application has been made for Windows
 
 ## How to install
 Execute the following steps
@@ -8,5 +9,3 @@ Execute the following steps
 3. Navigate to ReverseHangmanInstaller
 4. Run ReverseHangman.Application
 5. Click Install
-
-Disclaimer: This application has been made for Windows

@@ -31,7 +31,6 @@ namespace ReverseHangmanForms
             InitializeComponent();
             this._teamCollection = importTeamCollection;
         }
-
         public void Guess(string myLetter, object sender, EventArgs e)
         {
             new Guess(myLetter, _guesser, _wordClass);
@@ -42,7 +41,6 @@ namespace ReverseHangmanForms
             UpdatePoints();
             CheckIfRoundIsOver(sender, e);
         }
-
         void StartNextRound(object sender, EventArgs e)
         {
             ResetAllValues();
@@ -51,21 +49,19 @@ namespace ReverseHangmanForms
             InitializeComponent();
             FRM_Game_Load(sender, e);
         }
-
         void ResetAllValues()
         {
             _guesser.ResetGuessCollection();
             _differentLettersInWord.Clear();
         }
-
         void CheckIfRoundIsOver(object sender, EventArgs e)
         {
             if (_guesser.EndRound)
             {
+                _guesser.EndRound = false;
                 StartNextRound(sender, e);
             }
         }
-
         void SwitchTurns()
         {
             if (_teamCollection.GetTeamList()[0].Role == Roles.Wordmaster)
@@ -79,7 +75,6 @@ namespace ReverseHangmanForms
                 _teamCollection.GetTeamList()[1].Role = Roles.Guesser;
             }
         }
-
         void CheckIfDead(int lives)
         {
             DisplayLives();
@@ -88,7 +83,6 @@ namespace ReverseHangmanForms
                 MessageBox.Show("No lives left");
             }
         } // not done
-
         void SetGuesserAndWordMaster()
         {
             if (_teamCollection.GetTeamList()[0].Role == Roles.Guesser)

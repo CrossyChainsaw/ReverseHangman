@@ -29,21 +29,12 @@ namespace ReverseHangmanForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.LBL_Title = new System.Windows.Forms.Label();
             this.BTN_Play = new System.Windows.Forms.Button();
             this.BTN_Rules = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LBL_Reverse = new System.Windows.Forms.Label();
+            this.LBL_Title = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // LBL_Title
-            // 
-            this.LBL_Title.Font = new System.Drawing.Font("Comic Sans MS", 32F);
-            this.LBL_Title.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LBL_Title.Location = new System.Drawing.Point(12, 9);
-            this.LBL_Title.Name = "LBL_Title";
-            this.LBL_Title.Size = new System.Drawing.Size(776, 83);
-            this.LBL_Title.TabIndex = 0;
-            this.LBL_Title.Text = "Reverse Hangman";
-            this.LBL_Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // BTN_Play
             // 
@@ -71,15 +62,51 @@ namespace ReverseHangmanForms
             this.BTN_Rules.UseVisualStyleBackColor = false;
             this.BTN_Rules.Click += new System.EventHandler(this.BTN_Rules_Click);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 32F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(395, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(288, 83);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Hangman";
+            this.label1.Visible = false;
+            // 
+            // LBL_Reverse
+            // 
+            this.LBL_Reverse.Font = new System.Drawing.Font("Comic Sans MS", 32F);
+            this.LBL_Reverse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LBL_Reverse.Location = new System.Drawing.Point(162, 9);
+            this.LBL_Reverse.Name = "LBL_Reverse";
+            this.LBL_Reverse.Size = new System.Drawing.Size(277, 83);
+            this.LBL_Reverse.TabIndex = 5;
+            this.LBL_Reverse.Text = "Reverse";
+            this.LBL_Reverse.Visible = false;
+            // 
+            // LBL_Title
+            // 
+            this.LBL_Title.Font = new System.Drawing.Font("Comic Sans MS", 32F);
+            this.LBL_Title.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LBL_Title.Location = new System.Drawing.Point(12, 9);
+            this.LBL_Title.Name = "LBL_Title";
+            this.LBL_Title.Size = new System.Drawing.Size(776, 83);
+            this.LBL_Title.TabIndex = 6;
+            this.LBL_Title.Text = "Reverse Hangman";
+            this.LBL_Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.LBL_Title.Click += new System.EventHandler(this.LBL_Title_Click);
+            // 
             // FRM_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 421);
+            this.Controls.Add(this.LBL_Title);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LBL_Reverse);
             this.Controls.Add(this.BTN_Rules);
             this.Controls.Add(this.BTN_Play);
-            this.Controls.Add(this.LBL_Title);
             this.Name = "FRM_Menu";
             this.Text = "Reverse Hangman";
             this.ResumeLayout(false);
@@ -87,10 +114,11 @@ namespace ReverseHangmanForms
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LBL_Title;
         private System.Windows.Forms.Button BTN_Play;
         private System.Windows.Forms.Button BTN_Rules;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBL_Reverse;
+        private System.Windows.Forms.Label LBL_Title;
     }
 }
 

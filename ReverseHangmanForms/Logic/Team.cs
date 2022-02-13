@@ -15,11 +15,10 @@ namespace ReverseHangmanForms.Logic
         int _maxLives;
         bool _continueAfterSweep = false;
         int _pointsYouWillGain = 0;
-        bool _endRound = false;
 
         // Properties
         public GuessCollection GuessCollection { get { return _guessCollection; } }
-        public bool EndRound { get { return _endRound; } }
+        public bool EndRound { get; set; }
         public string Name { get; private set; }
         public int Score { get; private set; }
         public int Lives { get; private set; }
@@ -92,7 +91,7 @@ namespace ReverseHangmanForms.Logic
                 {
                     MessageBox.Show("Loser");
                     _pointsYouWillGain = 0;
-                    _endRound = true;
+                    EndRound = true;
                 }
                 else if (Lives == _maxLives && _guessCollection.UnderGoal())
                 {
@@ -107,7 +106,7 @@ namespace ReverseHangmanForms.Logic
                     {
                         MessageBox.Show("Bitch");
                         MessageBox.Show("Noble Sweep +2 points?");
-                        _endRound = true;
+                        EndRound = true;
                     }
                     _pointsYouWillGain = 2;
                 }
@@ -124,7 +123,7 @@ namespace ReverseHangmanForms.Logic
                     {
                         MessageBox.Show("Bitch");
                         MessageBox.Show("Its just a sweep +1");
-                        _endRound = true;
+                        EndRound = true;
                     }
                     _pointsYouWillGain = 1;
                 }
@@ -136,22 +135,22 @@ namespace ReverseHangmanForms.Logic
                     MessageBox.Show("Failed clean sweep noob"); // randomize some funny fail messages
                     // failed clean sweep +0
                     _pointsYouWillGain *= 0;
-                    _endRound = true;
+                    EndRound = true;
                 }
                 else if (Lives == _maxLives && _guessCollection.GuessedOutAllLetters())
                 {
                     MessageBox.Show("Royal Sweep +6");
                     _pointsYouWillGain = 6;
-                    _endRound = true;
+                    EndRound = true;
                 }
                 else if (Lives > 0 && _guessCollection.GuessedOutAllLetters())
                 {
                     MessageBox.Show("Clean Sweep +2");
                     _pointsYouWillGain *= 2;
-                    _endRound = true;
+                    EndRound = true;
                 }
             }
-            if (_endRound == true)
+            if (EndRound == true)
             {
                 AddScore(_pointsYouWillGain);
             }

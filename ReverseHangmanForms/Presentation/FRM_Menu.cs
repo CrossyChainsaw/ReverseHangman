@@ -40,6 +40,14 @@ namespace ReverseHangmanForms
         {
             OpenRules(this);
         }
+
+        private void LBL_Title_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in Controls)
+            {
+                control.Font = new Font(control.Font, FontStyle.Bold);
+            }
+        }
     }
 }
 

@@ -26,3 +26,7 @@ C:\Users\kaan-\source\repos\ReverseHangmanForms v1.0\ReverseHangmanForms\obj\Deb
 C:\Users\kaan-\source\repos\ReverseHangmanForms v1.0\ReverseHangmanForms\obj\Debug\ReverseHangmanForms.exe
 C:\Users\kaan-\source\repos\ReverseHangmanForms v1.0\ReverseHangmanForms\obj\Debug\ReverseHangmanForms.pdb
 C:\Users\kaan-\source\repos\ReverseHangmanForms\ReverseHangmanForms\obj\Debug\ReverseHangmanForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\kaan-\source\repos\ReverseHangmanForms\ReverseHangmanForms\bin\Debug\ReverseHangmanForms.exe.manifest
+C:\Users\kaan-\source\repos\ReverseHangmanForms\ReverseHangmanForms\bin\Debug\ReverseHangmanForms.application
+C:\Users\kaan-\source\repos\ReverseHangmanForms\ReverseHangmanForms\obj\Debug\ReverseHangmanForms.exe.manifest
+C:\Users\kaan-\source\repos\ReverseHangmanForms\ReverseHangmanForms\obj\Debug\ReverseHangmanForms.application

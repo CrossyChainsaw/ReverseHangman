@@ -10,5 +10,5 @@ Execute the following steps
 1. Click [here](https://github.com/KaanGogcay/ReverseHangman/archive/refs/heads/master.zip "ReverseHangmanDownload") to download the zip
 2. Extract the files from the zip
 3. Navigate to ReverseHangmanInstaller
-4. Run ReverseHangman.Application
+4. Run ReverseHangmanForms.Application
 5. Click Install

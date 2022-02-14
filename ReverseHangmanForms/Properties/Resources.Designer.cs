@@ -22,7 +22,7 @@ namespace ReverseHangmanForms.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ReverseHangmanForms.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ReverseHangmanForms.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace ReverseHangmanForms.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,19 +61,9 @@ namespace ReverseHangmanForms.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] BACKRG__ {
-            get {
-                object obj = ResourceManager.GetObject("BACKRG__", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fart_01 {
+        public static System.IO.UnmanagedMemoryStream fart_01 {
             get {
                 return ResourceManager.GetStream("fart_01", resourceCulture);
             }
@@ -82,7 +72,7 @@ namespace ReverseHangmanForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fart_02 {
+        public static System.IO.UnmanagedMemoryStream fart_02 {
             get {
                 return ResourceManager.GetStream("fart_02", resourceCulture);
             }
@@ -91,7 +81,7 @@ namespace ReverseHangmanForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fart_03 {
+        public static System.IO.UnmanagedMemoryStream fart_03 {
             get {
                 return ResourceManager.GetStream("fart_03", resourceCulture);
             }
@@ -100,7 +90,7 @@ namespace ReverseHangmanForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fart_04 {
+        public static System.IO.UnmanagedMemoryStream fart_04 {
             get {
                 return ResourceManager.GetStream("fart_04", resourceCulture);
             }
@@ -109,7 +99,7 @@ namespace ReverseHangmanForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fart_05 {
+        public static System.IO.UnmanagedMemoryStream fart_05 {
             get {
                 return ResourceManager.GetStream("fart_05", resourceCulture);
             }
@@ -118,7 +108,7 @@ namespace ReverseHangmanForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fart_06 {
+        public static System.IO.UnmanagedMemoryStream fart_06 {
             get {
                 return ResourceManager.GetStream("fart_06", resourceCulture);
             }
@@ -127,7 +117,7 @@ namespace ReverseHangmanForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fart_07 {
+        public static System.IO.UnmanagedMemoryStream fart_07 {
             get {
                 return ResourceManager.GetStream("fart_07", resourceCulture);
             }
@@ -136,7 +126,7 @@ namespace ReverseHangmanForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fart_08 {
+        public static System.IO.UnmanagedMemoryStream fart_08 {
             get {
                 return ResourceManager.GetStream("fart_08", resourceCulture);
             }
@@ -145,7 +135,7 @@ namespace ReverseHangmanForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream fart_09 {
+        public static System.IO.UnmanagedMemoryStream fart_09 {
             get {
                 return ResourceManager.GetStream("fart_09", resourceCulture);
             }

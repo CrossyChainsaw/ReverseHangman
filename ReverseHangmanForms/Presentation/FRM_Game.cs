@@ -51,7 +51,7 @@ namespace ReverseHangmanForms
         }
         void ResetAllValues()
         {
-            _guesser.ResetGuessCollection();
+            _guesser.ResetAllValues();
             _differentLettersInWord.Clear();
         }
         void CheckIfRoundIsOver(object sender, EventArgs e)

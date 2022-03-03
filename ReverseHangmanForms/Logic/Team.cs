@@ -156,7 +156,13 @@ namespace ReverseHangmanForms.Logic
             }
         }
 
-        public void ResetGuessCollection()
+        public void ResetAllValues()
+        {
+            ResetGuessCollection();
+            _continueAfterSweep = false;
+        }
+
+        void ResetGuessCollection()
         {
             _guessCollection = new GuessCollection();
         }

@@ -89,6 +89,12 @@
     <Compile Include="Presentation\FRM_CreateTeams.Designer.cs">
       <DependentUpon>FRM_CreateTeams.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\FRM_CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FRM_CustomMessageBox.Designer.cs">
+      <DependentUpon>FRM_CustomMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\FRM_Game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <Compile Include="Logic\TeamCollection.cs" />
     <EmbeddedResource Include="Presentation\FRM_CreateTeams.resx">
       <DependentUpon>FRM_CreateTeams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FRM_CustomMessageBox.resx">
+      <DependentUpon>FRM_CustomMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FRM_Game.resx">
       <DependentUpon>FRM_Game.cs</DependentUpon>

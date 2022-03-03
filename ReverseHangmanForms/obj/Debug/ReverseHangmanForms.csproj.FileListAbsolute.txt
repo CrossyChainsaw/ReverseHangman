@@ -30,3 +30,4 @@ C:\Users\kaan-\source\repos\ReverseHangmanForms\ReverseHangmanForms\bin\Debug\Re
 C:\Users\kaan-\source\repos\ReverseHangmanForms\ReverseHangmanForms\bin\Debug\ReverseHangmanForms.application
 C:\Users\kaan-\source\repos\ReverseHangmanForms\ReverseHangmanForms\obj\Debug\ReverseHangmanForms.exe.manifest
 C:\Users\kaan-\source\repos\ReverseHangmanForms\ReverseHangmanForms\obj\Debug\ReverseHangmanForms.application
+C:\Users\kaan-\source\repos\ReverseHangmanForms\ReverseHangmanForms\obj\Debug\ReverseHangmanForms.Presentation.FRM_CustomMessageBox.resources

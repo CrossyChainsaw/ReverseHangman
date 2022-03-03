@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReverseHangmanForms.Logic
 {
-    internal class GuessCollection
+    public class GuessCollection
     {
         // Fields
         public List<string> notGuessedLetters = new List<string>();

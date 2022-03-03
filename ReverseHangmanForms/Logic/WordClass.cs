@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReverseHangmanForms.Logic
 {
-    internal class WordClass
+    public class WordClass
     {
         // Fields
         GuessCollection _guessCollection;

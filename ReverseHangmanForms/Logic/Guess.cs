@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ReverseHangmanForms.Logic
 {
-    internal class Guess
+    public class Guess
     {
         // Fields
         Team _guesser;

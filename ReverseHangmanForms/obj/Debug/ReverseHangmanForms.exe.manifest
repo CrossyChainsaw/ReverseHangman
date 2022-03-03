@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReverseHangmanForms.exe" size="6594016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReverseHangmanForms.exe" size="6596064">
       <assemblyIdentity name="ReverseHangmanForms" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>g0tyjofJCSRai8trQ9MNdek1raXxZBHXwIoYwxH8nU0=</dsig:DigestValue>
+        <dsig:DigestValue>u5gR0wnEv5WvKXlYp2ftKJ0UizMfOjawFQ3n4jojNjQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

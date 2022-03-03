@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReverseHangmanForms.Presentation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Windows.Forms; // remove this later
 
 namespace ReverseHangmanForms.Logic
 {
-    internal class Team
+    public class Team
     {
         // Fields
         static Random _rnd = new Random();
@@ -19,6 +20,7 @@ namespace ReverseHangmanForms.Logic
         // Properties
         public GuessCollection GuessCollection { get { return _guessCollection; } }
         public bool EndRound { get; set; }
+        public bool WonTieBreaker { get; set; }
         public string Name { get; private set; }
         public int Score { get; private set; }
         public int Lives { get; private set; }
@@ -86,6 +88,20 @@ namespace ReverseHangmanForms.Logic
                     //
                     //
                     //
+                    DialogResult dialogResult = MessageBox.Show("Did guesser win the tiebreaker?", "Thinking moment", MessageBoxButtons.YesNo);
+                    
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        MessageBox.Show("epic moment +1 point");
+                        _pointsYouWillGain = 1;
+                        EndRound = true;
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        MessageBox.Show("Sadge +0 points");
+                        _pointsYouWillGain = 0;
+                        EndRound = true;
+                    }
                 }
                 else if (Lives == 0)
                 {
